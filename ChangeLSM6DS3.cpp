@@ -1,5 +1,5 @@
 /******************************************************************************
-    SparkFunLSM6DS3.cpp
+    ChangeLSM6DS3.cpp
     LSM6DS3 Arduino and Teensy Driver
 
     Marshall Taylor @ SparkFun Electronics
@@ -24,9 +24,9 @@
     Distributed as-is; no warranty is given.
 ******************************************************************************/
 
-//See SparkFunLSM6DS3.h for additional topology notes.
+//See ChangeLSM6DS3.h for additional topology notes.
 
-#include "SparkFunLSM6DS3.h"
+#include "ChangeLSM6DS3.h"
 #include "stdint.h"
 
 #include "Wire.h"
@@ -329,8 +329,8 @@ LSM6DS3::LSM6DS3(uint8_t busType, uint8_t inputArg) : LSM6DS3Core(busType, input
 
     settings.gyroEnabled = 1;  //Can be 0 or 1
     settings.gyroRange = 2000;   //Max deg/s.  Can be: 125, 245, 500, 1000, 2000
-    settings.gyroSampleRate = 416;   //Hz.  Can be: 13, 26, 52, 104, 208, 416, 833, 1666
-    settings.gyroBandWidth = 400;  //Hz.  Can be: 50, 100, 200, 400;
+    settings.gyroSampleRate = 13;   //Hz.  Can be: 13, 26, 52, 104, 208, 416, 833, 1666
+    settings.gyroBandWidth = 50;  //Hz.  Can be: 50, 100, 200, 400;
     settings.gyroFifoEnabled = 1;  //Set to include gyro in FIFO
     settings.gyroFifoDecimation = 1;  //set 1 for on /1
 
